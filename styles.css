@@ -90,6 +90,7 @@ h1 {
 
 .cv-section + .cv-section {
   border-top: 1px solid var(--rule);
+  margin-top: 10px;
 }
 
 .cv-section > h2 {
@@ -107,6 +108,8 @@ h1 {
 
 .entry {
   margin-bottom: 13px;
+  padding-left: 12px;
+  border-left: 2px solid #d8e4e9;
 }
 
 .entry:last-child {
@@ -165,6 +168,8 @@ li:last-child {
 }
 
 .skills-grid h3 {
+  padding-top: 7px;
+  border-top: 2px solid #d8e4e9;
   color: var(--ink);
 }
 
@@ -258,6 +263,7 @@ li:last-child {
 
   .cv-section + .cv-section {
     border-top-color: #cbd5db;
+    margin-top: 7px;
   }
 
   .cv-section > h2 {
@@ -267,6 +273,7 @@ li:last-child {
 
   .entry {
     margin-bottom: 8px;
+    padding-left: 9px;
   }
 
   .entry-heading h3,
