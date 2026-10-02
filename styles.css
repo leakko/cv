@@ -269,6 +269,8 @@ li:last-child {
   .cv-section > h2 {
     margin-bottom: 6px;
     font-size: 10.2pt;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .entry {
@@ -297,8 +299,10 @@ li:last-child {
     text-decoration: none;
   }
 
+  .cv-section,
   .entry,
   .skills-grid > div {
     break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
