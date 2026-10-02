@@ -1,0 +1,296 @@
+:root {
+  color-scheme: light;
+  --ink: #17202a;
+  --muted: #586572;
+  --accent: #0f5b78;
+  --rule: #d8e0e5;
+  --paper: #ffffff;
+  --background: #eef2f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  font-size: 10.5pt;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  line-height: 1.42;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: #8aa9b7;
+  text-underline-offset: 2px;
+}
+
+.cv-page {
+  width: min(100%, 210mm);
+  min-height: 297mm;
+  margin: 28px auto;
+  padding: 16mm 17mm 15mm;
+  background: var(--paper);
+  box-shadow: 0 10px 35px rgba(23, 32, 42, 0.12);
+}
+
+.cv-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 18px;
+  border-bottom: 3px solid var(--accent);
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 3px;
+  font-size: 29pt;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.headline {
+  margin-bottom: 0;
+  color: var(--accent);
+  font-size: 13pt;
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  flex: 0 0 235px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  color: var(--muted);
+  font-size: 9.2pt;
+  font-style: normal;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.contact a {
+  color: var(--ink);
+}
+
+.cv-section {
+  padding-top: 15px;
+}
+
+.cv-section > h2 {
+  margin-bottom: 9px;
+  color: var(--accent);
+  font-size: 11.5pt;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.cv-section > p {
+  margin-bottom: 0;
+}
+
+.entry {
+  margin-bottom: 13px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-heading {
+  position: relative;
+  padding-right: 145px;
+  margin-bottom: 4px;
+}
+
+.entry-heading h3,
+.skills-grid h3 {
+  margin-bottom: 1px;
+  font-size: 10.7pt;
+  line-height: 1.25;
+}
+
+.company {
+  display: inline;
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.company::before {
+  content: " - ";
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 9pt;
+  text-align: right;
+}
+
+ul {
+  margin: 4px 0 0;
+  padding-left: 17px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.entry p {
+  margin-bottom: 3px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 14px;
+}
+
+.skills-grid h3 {
+  color: var(--ink);
+}
+
+.skills-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 9.4pt;
+}
+
+.compact-section {
+  padding-top: 12px;
+}
+
+.compact-section p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 10pt;
+  }
+
+  .cv-page {
+    margin: 0;
+    padding: 28px 22px;
+  }
+
+  .cv-header {
+    display: block;
+  }
+
+  .contact {
+    align-items: flex-start;
+    margin-top: 14px;
+    text-align: left;
+  }
+
+  .entry-heading {
+    padding-right: 0;
+  }
+
+  .meta {
+    position: static;
+    margin-top: 2px;
+    text-align: left;
+  }
+
+  .skills-grid {
+    display: block;
+  }
+
+  .skills-grid > div {
+    margin-bottom: 10px;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 13mm 15mm 12mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+
+  body {
+    font-size: 9.3pt;
+  }
+
+  .cv-page {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .cv-header {
+    padding-bottom: 13px;
+  }
+
+  h1 {
+    font-size: 25pt;
+  }
+
+  .cv-section {
+    padding-top: 10px;
+  }
+
+  .cv-section > h2 {
+    margin-bottom: 6px;
+    font-size: 10.2pt;
+  }
+
+  .entry {
+    margin-bottom: 8px;
+  }
+
+  .entry-heading h3,
+  .skills-grid h3 {
+    font-size: 9.8pt;
+  }
+
+  .entry p,
+  li {
+    margin-bottom: 2px;
+  }
+
+  .skills-grid p,
+  .meta,
+  .contact {
+    font-size: 8.3pt;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .entry,
+  .skills-grid > div {
+    break-inside: avoid;
+  }
+}
