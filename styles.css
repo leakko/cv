@@ -85,7 +85,11 @@ h1 {
 }
 
 .cv-section {
-  padding-top: 15px;
+  padding-top: 20px;
+}
+
+.cv-section + .cv-section {
+  border-top: 1px solid var(--rule);
 }
 
 .cv-section > h2 {
@@ -110,8 +114,6 @@ h1 {
 }
 
 .entry-heading {
-  position: relative;
-  padding-right: 145px;
   margin-bottom: 4px;
 }
 
@@ -130,19 +132,13 @@ h1 {
 }
 
 .company::before {
-  content: " - ";
-  color: var(--muted);
-  font-weight: 400;
+  content: none;
 }
 
+.dates,
 .meta {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-bottom: 0;
   color: var(--muted);
   font-size: 9pt;
-  text-align: right;
 }
 
 ul {
@@ -257,7 +253,11 @@ li:last-child {
   }
 
   .cv-section {
-    padding-top: 10px;
+    padding-top: 14px;
+  }
+
+  .cv-section + .cv-section {
+    border-top-color: #cbd5db;
   }
 
   .cv-section > h2 {
@@ -281,6 +281,7 @@ li:last-child {
 
   .skills-grid p,
   .meta,
+  .dates,
   .contact {
     font-size: 8.3pt;
   }
